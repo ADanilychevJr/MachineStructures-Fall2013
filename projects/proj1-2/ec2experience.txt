@@ -1,0 +1,21 @@
+ec2experience.txt
+
+1. Run1) 12 min 17sec, 80maps 32reduce (Job1) + 33 sec, 32 maps 1 reduce (Job2)
+   Run2) 4  min 35sec, 80maps 32reduce (Job1) + 30 sec, 32 maps 1 reduce (Job2)
+   Run3) 14 min 21sec, 316map 32reduce (Job1) + 30 sec, 32 maps 1 reduce (Job2)
+   Run4) 8  min 15sec, 316map 32reduce (Job1) + 27 sec, 32 maps 1 reduce (Job2)
+   Run5) 8  min 15sec, 316map 32reduce (Job1) + 33 sec, 32 maps 1 reduce (Job2)
+   Run6) 8  min 54sec, 316map 32reduce (Job1) + 45 sec, 32 maps 1 reduce (Job2)
+
+2. The run with the combiner on was 268% faster than with it off
+
+3.  For 5 workers the median processing rate of input was .02GB/sec including Job2
+    For 9 workers the median processing rate of input was .0338 GB/sec including Job 2 (Run5)
+    
+4. The run with 9 workers was 171% faster than the run with 5 workers.
+   If my code was fully parallelizable, 9 workers would run 180% faster
+   Hadoop parallelizes the code pretty well. 171% is not much slower than 180%, so I must say Hadoop did a pretty great job
+
+5. With 5 workers it was .16 Dollars/GB. With 9 workers it was .29 Dollars/GB
+
+6. 21.46 dollars. I messed up a couple times :/ Cheers! PS Ajay is a boss
